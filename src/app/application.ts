@@ -13,5 +13,17 @@ export const createModule = (name: string, modules?: string[]) => {
 }
 
 export default () => {
-  return angular.module('app.application', ['app.boot'].concat(moduleList))
+  angular.module('app.application', ['app.boot'].concat(moduleList))
+
+  angular.element(document).ready(() => {
+    angular
+      .element(document)
+      .find('html')
+      .addClass('ng-app')
+    angular
+      .element(document)
+      .find('body')
+      .attr('ui-view', '')
+    angular.bootstrap(document, ['app.application'])
+  })
 }

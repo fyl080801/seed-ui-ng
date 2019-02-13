@@ -8,7 +8,8 @@ class SampleModule {
   ) {
     $stateProvider.state('index', {
       url: '/index',
-      templateUrl: 'modules/sample/views/index.html'
+      template: '<div>aaa</div>'
+      // templateUrl: '/modules/sample/views/index.html'
     })
 
     $urlRouterProvider.otherwise('/index')
