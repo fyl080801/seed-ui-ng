@@ -12,9 +12,13 @@ class SampleModule {
       })
       .add({
         name: 'home',
-        component: require('./components/home')
+        component: require('./components/home'),
+        children: [
+          { name: 'part1', component: require('./components/parts/part1') },
+          { name: 'part2', component: require('./components/parts/part2') }
+        ]
       })
-      .other('home')
+      .other('index')
   }
 }
 

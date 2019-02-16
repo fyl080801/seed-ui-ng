@@ -7,11 +7,18 @@ class RouterProvider implements seed.IRouterProvider {
     private $stateProvider: ng.ui.IStateProvider,
     private $urlRouterProvider: ng.ui.IUrlRouterProvider
   ) {}
-  add(options: any): seed.IRouterProvider {
+  add(options: seed.RouteOptions): seed.IRouterProvider {
+    let pathArray = options.name.split('.')
     this.$stateProvider.state(options.name, {
-      url: '/' + options.name,
+      url: '/' + pathArray[pathArray.length - 1],
       template: options.component
     })
+    ;(options.children || []).forEach(route => {
+      this.add(
+        Object.assign(route, { name: [options.name, route.name].join('.') })
+      )
+    })
+
     return this
   }
   other(name: string): seed.IRouterProvider {

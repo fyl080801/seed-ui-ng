@@ -1,3 +1,31 @@
-<div ng-controller="sample/components/index">
-  aaa
+<div class="container" ng-controller="sample/components/index">
+  <div class="jumbotron">
+    <h1>Seed UI 示例</h1>
+    <p>原 seed-ui-angular 项目用 webpack 重写</p>
+    <p>
+      <a class="btn btn-primary btn-lg" href="#" role="button">Learn more</a>
+    </p>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <button class="btn btn-default" ng-click="vm.click1()">事件</button>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <button class="btn btn-success" ng-click="vm.click2()">
+        <span class="glyphicon glyphicon-new-window" aria-hidden="true"></span>
+        侧边弹窗
+      </button>
+      <button class="btn btn-success" ng-click="vm.click3()">
+        <span class="glyphicon glyphicon-plus" aria-hidden="true"></span>
+        弹窗
+      </button>
+    </div>
+  </div>
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <a href="#/home">子路由</a>
+    </div>
+  </div>
 </div>

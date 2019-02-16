@@ -2,6 +2,7 @@
 
 import * as angular from 'angular'
 import './config/router'
+import './config/modal'
 import './provider/routerProvider'
 
 export class Application {
@@ -21,7 +22,7 @@ export class Application {
         .element(document)
         .find('body')
         .attr('ui-view', '')
-      angular.bootstrap(document, ['app.application'])
+      angular.bootstrap(document.body, ['app.application'])
     })
   }
 }

@@ -1,3 +1,6 @@
+'use strict'
+
+const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -22,8 +25,22 @@ module.exports = {
         include: /src/
       },
       {
-        test: /\.(png|jpe?g|gif|woff|svg|eot|ttf)(\?.*)?$/,
-        use: 'url-loader'
+        test: /\.(woff|woff2|svg|eot|ttf)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: '[name].[ext]',
+          outputPath: 'assets/fonts'
+        }
+      },
+      {
+        test: /\.(png|jpe?g|gif)(\?.*)?$/,
+        loader: 'url-loader',
+        options: {
+          limit: 8192,
+          name: '[name].[ext]',
+          outputPath: 'assets/images'
+        }
       },
       {
         test: /\.css$/,
@@ -36,6 +53,10 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: true
+    }),
+    new webpack.ProvidePlugin({
+      $: 'jquery',
+      jQuery: 'jquery'
     })
   ],
   resolve: {

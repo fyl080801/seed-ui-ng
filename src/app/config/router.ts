@@ -1,8 +1,10 @@
+'use strict'
+
 import boot from '../boot'
 
 class Run {
   constructor(
-    $rootScope: any,
+    $rootScope: ng.IRootScopeService & seed.KeyValuePairs,
     $state: ng.ui.IStateService,
     $stateParams: ng.ui.IStateParamsService
   ) {

@@ -21,10 +21,7 @@ module.exports = merge(config, {
   mode: 'production',
   optimization: {
     splitChunks: {
-      chunks: 'initial',
-      minChunks: 1,
-      maxAsyncRequests: 5,
-      maxInitialRequests: 3
+      chunks: 'initial'
     }
   },
   output: {

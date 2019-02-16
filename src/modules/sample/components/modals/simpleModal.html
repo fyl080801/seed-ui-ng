@@ -1,0 +1,22 @@
+<div class="modal-content" ng-controller="simpleModalController">
+  <div class="modal-header">
+    <button
+      type="button"
+      class="close"
+      data-dismiss="modal"
+      aria-label="Close"
+      ng-click="$close()"
+    >
+      <span aria-hidden="true">&times;</span>
+    </button>
+    <h4 class="modal-title">Modal title</h4>
+  </div>
+  <div class="modal-body">
+    <p>One fine body&hellip;</p>
+    <p>
+      <button class="btn btn-default" ng-click="vm.action()">
+        inner action
+      </button>
+    </p>
+  </div>
+</div>
