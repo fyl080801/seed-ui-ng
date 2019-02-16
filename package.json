@@ -8,8 +8,8 @@
     "build": "webpack --config ./config/webpack.config.prod.js"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "fyl080801",
+  "license": "MIT",
   "devDependencies": {
     "@types/angular": "^1.6.54",
     "@types/angular-ui-bootstrap": "^0.13.47",
