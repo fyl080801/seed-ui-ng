@@ -1,4 +1,6 @@
+'use strict'
+
 import './modules/sample/module'
 import application from './app/application'
 
-application()
+application().run()
