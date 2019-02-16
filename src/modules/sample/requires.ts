@@ -1,1 +1,2 @@
-import './controllers/index'
+import './components/index'
+import './components/home'

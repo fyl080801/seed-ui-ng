@@ -7,8 +7,11 @@ class RouterProvider implements seed.IRouterProvider {
     private $stateProvider: ng.ui.IStateProvider,
     private $urlRouterProvider: ng.ui.IUrlRouterProvider
   ) {}
-  add(name: string, options: any): seed.IRouterProvider {
-    this.$stateProvider.state(name, {})
+  add(options: any): seed.IRouterProvider {
+    this.$stateProvider.state(options.name, {
+      url: '/' + options.name,
+      template: options.component
+    })
     return this
   }
   other(name: string): seed.IRouterProvider {

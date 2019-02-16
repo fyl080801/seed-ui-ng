@@ -1,5 +1,4 @@
 const HtmlWebpackPlugin = require('html-webpack-plugin')
-// const CopyWebpackPlugin = require('copy-webpack-plugin')
 
 module.exports = {
   entry: {
@@ -14,7 +13,13 @@ module.exports = {
       },
       {
         test: /\.html$/,
-        use: 'html-loader'
+        use: 'html-loader',
+        exclude: /src/
+      },
+      {
+        test: /\.html$/,
+        use: 'text-loader',
+        include: /src/
       },
       {
         test: /\.(png|jpe?g|gif|woff|svg|eot|ttf)(\?.*)?$/,
