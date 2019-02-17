@@ -14,8 +14,14 @@ class SampleModule {
         name: 'home',
         component: require('./components/home'),
         children: [
-          { name: 'part1', component: require('./components/parts/part1') },
-          { name: 'part2', component: require('./components/parts/part2') }
+          {
+            name: 'part1',
+            component: require('./components/parts/part1')
+          },
+          {
+            name: 'part2',
+            component: require('./components/parts/part2')
+          }
         ]
       })
       .other('index')

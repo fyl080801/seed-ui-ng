@@ -1,6 +1,7 @@
 import mod from '../module'
-
-const tmp = require('./modals/simpleModal')
+// import * as template from './index.html'
+// import * as SimpleModal from './modals/simpleModal'
+const SimpleModal = require('./modals/simpleModal')
 
 class Controller {
   constructor(private $scope: any, private $modal: seed.IModalService) {
@@ -14,7 +15,7 @@ class Controller {
   click2() {
     this.$modal
       .open({
-        component: tmp,
+        component: SimpleModal,
         windowClass: 'right',
         backdrop: 'static',
         size: 'lg'
@@ -24,7 +25,7 @@ class Controller {
 
   click3() {
     this.$modal.open({
-      component: tmp,
+      component: SimpleModal,
       size: 'sm'
     })
   }
