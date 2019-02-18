@@ -1,0 +1,22 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">
+      <span class="glyphicon glyphicon-question-sign"></span> 确认
+    </h4>
+  </div>
+  <div class="modal-body clearfix">
+    <p ng-if="$data.text">{{ $data.text }}</p>
+    <ul ng-if="$data.contents">
+      <li ng-repeat="content in $data.contents track by $index">
+        {{ content }}
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$close(true)">
+      <i class="glyphicon glyphicon-ok-sign"></i> 确定</button
+    ><button class="btn btn-default" type="button" ng-click="$dismiss()">
+      <i class="glyphicon glyphicon-remove-sign"></i> 取消
+    </button>
+  </div>
+</div>

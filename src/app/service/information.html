@@ -1,0 +1,20 @@
+<div class="modal-content">
+  <div class="modal-header">
+    <h4 class="modal-title">
+      <i class="glyphicon glyphicon-info-sign"></i> 消息
+    </h4>
+  </div>
+  <div class="modal-body">
+    <p ng-if="$data.text">{{ $data.text }}</p>
+    <ul ng-if="$data.contents">
+      <li ng-repeat="content in $data.contents track by $index">
+        {{ content }}
+      </li>
+    </ul>
+  </div>
+  <div class="modal-footer">
+    <button class="btn btn-primary" type="button" ng-click="$close()">
+      <i class="glyphicon glyphicon-ok-sign"></i> 确定
+    </button>
+  </div>
+</div>

@@ -1,9 +1,15 @@
 'use strict'
 
 import * as angular from 'angular'
+import './constant/enums'
 import './config/router'
 import './config/modal'
-import './provider/routerProvider'
+import './provider/router'
+import './factory/delayTimer'
+import './service/tree'
+import './service/popup'
+import './service/request'
+import './directive/equals'
 
 export class Application {
   public static moduleList: string[] = []

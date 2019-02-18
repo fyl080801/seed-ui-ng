@@ -4,10 +4,12 @@ import { createModule } from '../../app/application'
 
 class SampleModule {
   static $inject = ['$routerProvider']
+
   constructor($routerProvider: seed.IRouterProvider) {
     $routerProvider
       .add({
         name: 'index',
+        title: '首页',
         component: require('./components/index')
       })
       .add({
@@ -16,6 +18,7 @@ class SampleModule {
         children: [
           {
             name: 'part1',
+            title: '标题1',
             component: require('./components/parts/part1')
           },
           {

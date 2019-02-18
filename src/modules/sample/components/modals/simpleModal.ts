@@ -10,7 +10,7 @@ class Controller {
 
   action() {
     this.$modal.open({
-      component: '<div>sssss</div>'
+      component: '<div class="modal-content">sssss</div>'
     })
   }
 }

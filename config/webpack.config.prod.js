@@ -21,7 +21,7 @@ module.exports = merge(config, {
   mode: 'production',
   optimization: {
     splitChunks: {
-      chunks: 'initial'
+      chunks: 'all'
     }
   },
   output: {
