@@ -1,6 +1,5 @@
 'use strict'
 
-const webpack = require('webpack')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 module.exports = {
@@ -53,13 +52,9 @@ module.exports = {
       filename: 'index.html',
       template: 'index.html',
       inject: true
-    }),
-    new webpack.ProvidePlugin({
-      $: 'jquery',
-      jQuery: 'jquery'
     })
   ],
   resolve: {
-    extensions: ['.ts', '.js', '.json']
+    extensions: ['.ts', '.js', '.json', '.html']
   }
 }

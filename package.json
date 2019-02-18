@@ -48,7 +48,6 @@
     "angular-cookies": "1.2.32",
     "angular-sanitize": "1.2.32",
     "angular-ui-router": "0.3.1",
-    "bootstrap": "^3.4.1",
-    "jquery": "^1.12.4"
+    "bootstrap": "^3.4.1"
   }
 }
