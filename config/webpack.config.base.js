@@ -1,9 +1,12 @@
 'use strict'
 
 const HtmlWebpackPlugin = require('html-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+// const path = require('path')
 
 module.exports = {
   entry: {
+    // polyfill: './src/polyfill.ts',
     main: './src/index.ts'
   },
   module: {
@@ -43,7 +46,7 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        loader: ['style-loader', 'css-loader']
+        use: [MiniCssExtractPlugin.loader, 'css-loader']
       }
     ]
   },
@@ -53,6 +56,10 @@ module.exports = {
       template: './public/index.html',
       favicon: './public/favicon.ico',
       inject: true
+    }),
+    new MiniCssExtractPlugin({
+      filename: '[name].css',
+      chunkFilename: '[id].css'
     })
   ],
   resolve: {
