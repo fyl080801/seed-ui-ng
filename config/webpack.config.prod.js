@@ -22,7 +22,7 @@ module.exports = merge(config, {
   },
   output: {
     path: path.join(process.cwd(), '/dist'),
-    filename: './js/[name].[chunkhash].js'
+    filename: 'assets/js/[name].[chunkhash].js'
   },
   devtool: false
 })

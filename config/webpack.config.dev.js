@@ -32,6 +32,6 @@ module.exports = merge(config, {
   },
   output: {
     path: path.join(process.cwd(), '/dist'),
-    filename: './js/[name].bundle.js'
+    filename: 'assets/js/[name].bundle.js'
   }
 })

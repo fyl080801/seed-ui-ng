@@ -46,7 +46,15 @@ module.exports = {
       },
       {
         test: /\.css$/,
-        use: [MiniCssExtractPlugin.loader, 'css-loader']
+        use: [
+          {
+            loader: MiniCssExtractPlugin.loader,
+            options: {
+              publicPath: '../../'
+            }
+          },
+          'css-loader'
+        ]
       }
     ]
   },
@@ -58,8 +66,8 @@ module.exports = {
       inject: true
     }),
     new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css'
+      filename: 'assets/css/[name].css',
+      chunkFilename: 'assets/css/[name].[id].css'
     })
   ],
   resolve: {
