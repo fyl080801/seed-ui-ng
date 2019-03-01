@@ -2,6 +2,7 @@
 
 import boot from '../boot'
 import { setProperty } from '../utils/helper'
+import * as assign from 'object-assign'
 
 class RouterProvider implements seed.IRouterProvider {
   constructor(
@@ -21,9 +22,7 @@ class RouterProvider implements seed.IRouterProvider {
 
     this.$stateProvider.state(options.name, routeState)
     ;(options.children || []).forEach(route => {
-      this.add(
-        Object.assign(route, { name: [options.name, route.name].join('.') })
-      )
+      this.add(assign(route, { name: [options.name, route.name].join('.') }))
     })
 
     return this

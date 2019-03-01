@@ -11,10 +11,14 @@
   "author": "fyl080801",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.3.4",
     "@types/angular": "^1.6.54",
     "@types/angular-ui-bootstrap": "^0.13.47",
     "@types/angular-ui-router": "^1.1.40",
     "@types/node": "^11.9.3",
+    "@types/object-assign": "^4.0.30",
+    "babel-loader": "^8.0.5",
+    "babel-plugin-transform-export-extensions": "^6.22.0",
     "clean-webpack-plugin": "^1.0.1",
     "copy-webpack-plugin": "^4.6.0",
     "css-loader": "^2.1.0",
@@ -55,6 +59,7 @@
     "es5-shim": "^4.5.12",
     "es6-promise": "^4.2.6",
     "html5shiv": "^3.7.3",
+    "object-assign": "^4.1.1",
     "respond.js": "^1.4.2"
   }
 }

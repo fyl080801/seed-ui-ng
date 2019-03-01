@@ -5,8 +5,9 @@
     "sourceMap": true,
     "lib": ["dom", "es2015"],
     "module": "commonjs",
-    "target": "es5",
+    "target": "es3",
     "allowJs": true,
+    "jsx": "preserve",
     "resolveJsonModule": true
   }
 }

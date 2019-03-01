@@ -17,10 +17,10 @@ module.exports = merge(config, {
   devtool: 'cheap-module-eval-source-map',
   devServer: {
     contentBase: '/dist/',
-    host: 'localhost',
+    host: '0.0.0.0',
     port: 8080,
     inline: true,
-    hot: true,
+    hot: false,
     compress: true,
     watchContentBase: true
     // proxy: {
