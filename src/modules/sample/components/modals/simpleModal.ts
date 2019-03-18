@@ -9,9 +9,12 @@ class Controller {
   }
 
   action() {
-    this.$modal.open({
-      component: '<div class="modal-content">sssss</div>'
-    })
+    this.$modal
+      .open({
+        component: '<div class="modal-content">sssss</div>'
+      })
+      .result.then(() => {})
+      .catch(() => {})
   }
 }
 

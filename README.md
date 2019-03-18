@@ -4,8 +4,6 @@
 
 原 seed-ui-angular 基于 webpack 打包重写，使用`typescript`开发
 
-要问现在`rect`、`vue`满天飞为什么非得用`angular`老版本，支持`ie8`呗
-
 ## 基于组件的路由
 
 原`angular`路由是不支持组件的，只能分着设置`template`和`controller`，现在把这个过程做成类似`vue`那种用组件形式定义，支持子路由
